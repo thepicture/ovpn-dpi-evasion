@@ -1,0 +1,16 @@
+{
+  "name": "ovpn-dpi-evasion",
+  "version": "1.0.0",
+  "homepage": "ovpn-dpi-evasion",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [],
+  "author": "thepicture",
+  "license": "ISC"
+}

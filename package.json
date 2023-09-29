@@ -1,6 +1,6 @@
 {
   "name": "ovpn-dpi-evasion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "ovpn-dpi-evasion",
   "description": "",
   "main": "index.js",

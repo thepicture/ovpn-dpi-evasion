@@ -19,6 +19,18 @@ mitm.intercept((packet) => {
 });
 ```
 
+```js
+const mitm = new MITM();
+const ip = "1.2.3.4";
+const port = 1234;
+
+mitm.on("desync", (buffer) => {
+  // ...
+});
+
+mitm.desync(ip, port, "tcp");
+```
+
 ## Superuser mitigation
 
 ```bash
@@ -29,6 +41,12 @@ sudo visudo
 ...
 $(echo $USER) ALL = NOPASSWD: $(which tcpdump)
 ```
+
+## Deps
+
+- `nmap`
+- `tcpdump`
+- `iptables`
 
 ## Test
 

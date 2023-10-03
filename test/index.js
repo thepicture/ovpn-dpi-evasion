@@ -29,4 +29,19 @@ describe("MITM", () => {
       }
     });
   });
+
+  it("should desync ports", (done) => {
+    const mitm = new MITM();
+    const ip = "127.0.0.1";
+    const port = 6666;
+
+    mitm.on("desync", () => {
+      assert.ok();
+      done();
+    });
+
+    mitm.desync(ip, port, "tcp");
+    mitm.desync(ip, port + 1, "udp");
+    mitm.desync(ip, port + 2, "tcp");
+  });
 });
